@@ -239,7 +239,7 @@ output "app_configuration" {
 }
 
 output "attestation_provider" {
-  value       = local.az.attestation_provider
+  value       = local.az_test.attestation_provider
   description = "Attestation Provider"
 }
 

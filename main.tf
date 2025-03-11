@@ -1,8 +1,21 @@
 locals {
   region_code = lower(lookup(local.region_code_map, var.region_name, "{regionCode}"))
+  az_test = {
+    "attestation_provider" = {
+        "standard" = {
+          name = "standard"
+          private_dns_zone_names = [
+            "privatelink.attest.azure.net"
+          ]
+          public_dns_zone_forwarders = [
+            "attest.azure.net"
+          ]
+        }
+    }
+  }
   az = {
     "machine_learning_workspace" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "amlworkspace"
           private_dns_zone_names = [
@@ -16,11 +29,11 @@ locals {
             "aznbcontent.net",
             "inference.ml.azure.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "ai_services" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "account"
           private_dns_zone_names = [
@@ -33,11 +46,11 @@ locals {
             "openai.azure.com",
             "services.ai.azure.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "bot_service_azure_bot" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "Bot"
           private_dns_zone_names = [
@@ -55,11 +68,11 @@ locals {
           public_dns_zone_forwarders = [
             "token.botframework.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "synapse_workspace" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "Sql"
           private_dns_zone_names = [
@@ -86,11 +99,11 @@ locals {
           public_dns_zone_forwarders = [
             "dev.azuresynapse.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "synapse_private_link_hub" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "Web"
           private_dns_zone_names = [
@@ -99,11 +112,11 @@ locals {
           public_dns_zone_forwarders = [
             "azuresynapse.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "eventhub" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "namespace"
           private_dns_zone_names = [
@@ -112,11 +125,11 @@ locals {
           public_dns_zone_forwarders = [
             "servicebus.windows.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "servicebus_namespace" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "namespace"
           private_dns_zone_names = [
@@ -125,11 +138,11 @@ locals {
           public_dns_zone_forwarders = [
             "servicebus.windows.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "data_factory" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "dataFactory"
           private_dns_zone_names = [
@@ -147,11 +160,11 @@ locals {
           public_dns_zone_forwarders = [
             "adf.azure.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "hdinsight_hadoop_cluster" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "gateway"
           private_dns_zone_names = [
@@ -169,11 +182,11 @@ locals {
           public_dns_zone_forwarders = [
             "azurehdinsight.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "hdinsight_hbase_cluster" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "gateway"
           private_dns_zone_names = [
@@ -191,11 +204,11 @@ locals {
           public_dns_zone_forwarders = [
             "azurehdinsight.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "hdinsight_kafka_cluster" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "gateway"
           private_dns_zone_names = [
@@ -213,11 +226,11 @@ locals {
           public_dns_zone_forwarders = [
             "azurehdinsight.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "hdinsight_spark_cluster" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "gateway"
           private_dns_zone_names = [
@@ -235,11 +248,11 @@ locals {
           public_dns_zone_forwarders = [
             "azurehdinsight.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "hdinsight_interactive_query_cluster" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "gateway"
           private_dns_zone_names = [
@@ -257,11 +270,11 @@ locals {
           public_dns_zone_forwarders = [
             "azurehdinsight.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "kusto_cluster" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "cluster"
           private_dns_zone_names = [
@@ -276,11 +289,11 @@ locals {
             "queue.core.windows.net",
             "table.core.windows.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "databricks_workspace" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "databricks_ui_api"
           private_dns_zone_names = [
@@ -298,11 +311,11 @@ locals {
           public_dns_zone_forwarders = [
             "azuredatabricks.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "batch_account" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "batchAccount"
           private_dns_zone_names = [
@@ -320,11 +333,11 @@ locals {
           public_dns_zone_forwarders = [
             replace("{regionName}.service.batch.azure.com", "{regionName}", var.region_name)
           ]
-        },
-      ]
+        }
+      }
     },
     "virtual_desktop_workspace" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "global"
           private_dns_zone_names = [
@@ -342,11 +355,11 @@ locals {
           public_dns_zone_forwarders = [
             "wvd.microsoft.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "virtual_desktop_host_pool" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "connection"
           private_dns_zone_names = [
@@ -355,11 +368,11 @@ locals {
           public_dns_zone_forwarders = [
             "wvd.microsoft.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "kubernetes_cluster" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "management"
           private_dns_zone_names = [
@@ -369,11 +382,11 @@ locals {
           public_dns_zone_forwarders = [
             replace("{regionName}.azmk8s.io", "{regionName}", var.region_name)
           ]
-        },
-      ]
+        }
+      }
     },
     "container_app" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "managedEnvironment"
           private_dns_zone_names = [
@@ -382,11 +395,11 @@ locals {
           public_dns_zone_forwarders = [
             "azurecontainerapps.io"
           ]
-        },
-      ]
+        }
+      }
     },
     "container_registry" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "privatelink.azurecr.io"
           private_dns_zone_names = [
@@ -396,11 +409,11 @@ locals {
             "azurecr.io",
             replace("{regionName}.data.azurecr.io", "{regionName}", var.region_name)
           ]
-        },
-      ]
+        }
+      }
     },
     "mssql_server" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "sqlServer"
           private_dns_zone_names = [
@@ -409,11 +422,11 @@ locals {
           public_dns_zone_forwarders = [
             "database.windows.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "mssql_managed_instance" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "managedInstance"
           private_dns_zone_names = [
@@ -422,11 +435,11 @@ locals {
           public_dns_zone_forwarders = [
             replace(replace("{instanceName}.{dnsPrefix}.database.windows.net", "{instanceName}", var.instance_name), "{dnsPrefix}", var.dns_prefix)
           ]
-        },
-      ]
+        }
+      }
     },
     "cosmosdb_account" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "Sql"
           private_dns_zone_names = [
@@ -480,11 +493,11 @@ locals {
           public_dns_zone_forwarders = [
             "analytics.cosmos.azure.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "postgresql_server" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "postgresqlServer"
           private_dns_zone_names = [
@@ -493,11 +506,11 @@ locals {
           public_dns_zone_forwarders = [
             "postgres.database.azure.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "postgresql_flexible_server" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "postgresqlServer"
           private_dns_zone_names = [
@@ -506,11 +519,11 @@ locals {
           public_dns_zone_forwarders = [
             "postgres.database.azure.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "mysql_flexible_server" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "mysqlServer"
           private_dns_zone_names = [
@@ -519,11 +532,11 @@ locals {
           public_dns_zone_forwarders = [
             "mysql.database.azure.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "redis_cache" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "redisCache"
           private_dns_zone_names = [
@@ -532,11 +545,11 @@ locals {
           public_dns_zone_forwarders = [
             "redis.cache.windows.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "redis_enterprise_cluster" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "redisEnterprise"
           private_dns_zone_names = [
@@ -545,11 +558,11 @@ locals {
           public_dns_zone_forwarders = [
             replace("{instanceName}.{region}.redis.azure.net", "{instanceName}", var.instance_name)
           ]
-        },
-      ]
+        }
+      }
     },
     "arc_private_link_scope" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "hybridcompute"
           private_dns_zone_names = [
@@ -562,11 +575,11 @@ locals {
             "guestconfiguration.azure.com",
             "dp.kubernetesconfiguration.azure.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "eventgrid_topic" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "topic"
           private_dns_zone_names = [
@@ -575,11 +588,11 @@ locals {
           public_dns_zone_forwarders = [
             "eventgrid.azure.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "eventgrid_domain" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "domain"
           private_dns_zone_names = [
@@ -588,11 +601,11 @@ locals {
           public_dns_zone_forwarders = [
             "eventgrid.azure.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "eventgrid_namespace" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "topic"
           private_dns_zone_names = [
@@ -601,11 +614,11 @@ locals {
           public_dns_zone_forwarders = [
             "eventgrid.azure.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "api_management" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "Gateway"
           private_dns_zone_names = [
@@ -614,11 +627,11 @@ locals {
           public_dns_zone_forwarders = [
             "azure-api.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "healthcare_workspace" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "healthcareworkspace"
           private_dns_zone_names = [
@@ -631,11 +644,11 @@ locals {
             "fhir.azurehealthcareapis.com",
             "dicom.azurehealthcareapis.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "iothub" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "iotHub"
           private_dns_zone_names = [
@@ -646,11 +659,11 @@ locals {
             "azure-devices.net",
             "servicebus.windows.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "iothub_dps" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "iotDps"
           private_dns_zone_names = [
@@ -659,11 +672,11 @@ locals {
           public_dns_zone_forwarders = [
             "azure-devices-provisioning.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "iothub_device_update_account" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "DeviceUpdate"
           private_dns_zone_names = [
@@ -672,11 +685,11 @@ locals {
           public_dns_zone_forwarders = [
             "api.adu.microsoft.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "iotcentral_application" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "iotApp"
           private_dns_zone_names = [
@@ -685,11 +698,11 @@ locals {
           public_dns_zone_forwarders = [
             "azureiotcentral.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "digital_twins_instance" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "API"
           private_dns_zone_names = [
@@ -698,11 +711,11 @@ locals {
           public_dns_zone_forwarders = [
             "digitaltwins.azure.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "automation_account" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "Webhook"
           private_dns_zone_names = [
@@ -720,11 +733,11 @@ locals {
           public_dns_zone_forwarders = [
             replace("{regionCode}.azure-automation.net", "{regionCode}", local.region_code)
           ]
-        },
-      ]
+        }
+      }
     },
     "recovery_services_vault" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "AzureBackup"
           private_dns_zone_names = [
@@ -742,11 +755,11 @@ locals {
           public_dns_zone_forwarders = [
             replace("{regionCode}.siterecovery.windowsazure.com", "{regionCode}", local.region_code)
           ]
-        },
-      ]
+        }
+      }
     },
     "monitor_private_link_scope" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "azuremonitor"
           private_dns_zone_names = [
@@ -765,11 +778,11 @@ locals {
             "services.visualstudio.com",
             "applicationinsights.azure.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "purview_account" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "account"
           private_dns_zone_names = [
@@ -796,11 +809,11 @@ locals {
           public_dns_zone_forwarders = [
             "purview-service.microsoft.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "resource_management_private_link" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "ResourceManagement"
           private_dns_zone_names = [
@@ -809,11 +822,11 @@ locals {
           public_dns_zone_forwarders = [
             "azure.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "dashboard_grafana" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "grafana"
           private_dns_zone_names = [
@@ -822,11 +835,11 @@ locals {
           public_dns_zone_forwarders = [
             "grafana.azure.com"
           ]
-        },
-      ]
+        }
+      }
     },
     "key_vault" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "vault"
           private_dns_zone_names = [
@@ -845,11 +858,11 @@ locals {
           public_dns_zone_forwarders = [
             "managedhsm.azure.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "app_configuration" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "configurationStores"
           private_dns_zone_names = [
@@ -858,11 +871,11 @@ locals {
           public_dns_zone_forwarders = [
             "azconfig.io"
           ]
-        },
-      ]
+        }
+      }
     },
     "attestation_provider" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "standard"
           private_dns_zone_names = [
@@ -871,11 +884,11 @@ locals {
           public_dns_zone_forwarders = [
             "attest.azure.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "storage_account" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "blob"
           private_dns_zone_names = [
@@ -974,11 +987,11 @@ locals {
           public_dns_zone_forwarders = [
             "dfs.core.windows.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "storage_sync" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "afs"
           private_dns_zone_names = [
@@ -987,11 +1000,11 @@ locals {
           public_dns_zone_forwarders = [
             "afs.azure.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "managed_disk" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "disks"
           private_dns_zone_names = [
@@ -1000,11 +1013,11 @@ locals {
           public_dns_zone_forwarders = [
             "blob.core.windows.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "search_service" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "searchService"
           private_dns_zone_names = [
@@ -1013,11 +1026,11 @@ locals {
           public_dns_zone_forwarders = [
             "search.windows.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "relay_namespace" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "namespace"
           private_dns_zone_names = [
@@ -1026,11 +1039,11 @@ locals {
           public_dns_zone_forwarders = [
             "servicebus.windows.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "linux_function_app" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "sites"
           private_dns_zone_names = [
@@ -1041,11 +1054,11 @@ locals {
             "azurewebsites.net",
             "scm.azurewebsites.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "windows_function_app" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "sites"
           private_dns_zone_names = [
@@ -1056,11 +1069,11 @@ locals {
             "azurewebsites.net",
             "scm.azurewebsites.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "signalr_service" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "signalr"
           private_dns_zone_names = [
@@ -1069,11 +1082,11 @@ locals {
           public_dns_zone_forwarders = [
             "service.signalr.net"
           ]
-        },
-      ]
+        }
+      }
     },
     "static_web_app" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "staticSites"
           private_dns_zone_names = [
@@ -1084,11 +1097,11 @@ locals {
             "azurestaticapps.net",
             replace("{partitionId}.azurestaticapps.net", "{partitionId}", var.partition_id)
           ]
-        },
-      ]
+        }
+      }
     },
     "web_pubsub" = {
-      subresources = [
+      "changebyname" = {
         {
           name = "webpubsub"
           private_dns_zone_names = [
