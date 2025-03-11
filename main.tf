@@ -19,7 +19,7 @@ locals {
         },
       ]
     },
-    "azurerm_ai_services" = {
+    "ai_services" = {
       subresources = [
         {
           name = "account"

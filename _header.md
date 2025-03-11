@@ -11,97 +11,97 @@ An example for deploying an storage account with Private DNS Zone for blob, priv
 ```hcl
 locals {
   # Get unique private dns zones
-  unique_private_dns_zone_names = { for zone in module.azurerm_private_dns_zones.storage_account.subresources : zone.name => zone.private_dns_zone_names }
+  unique_private_dns_zone_names = { for zone in module.private_dns_zones.storage_account.subresources : zone.name => zone.private_dns_zone_names }
 }
 output "local" {
   value = local.unique_private_dns_zone_names
 }
 
 # Resource Group
-resource "azurerm_resource_group" "example" {
+resource "resource_group" "example" {
   name     = "example-resources"
   location = "spaincentral"
 }
 
 # Virtual Network
-resource "azurerm_virtual_network" "example" {
+resource "virtual_network" "example" {
   name                = "example-vnet"
   address_space       = ["10.0.0.0/16"]
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
+  location            = resource_group.example.location
+  resource_group_name = resource_group.example.name
 }
 
 # Subnet 1
-resource "azurerm_subnet" "private_endpoint" {
+resource "subnet" "private_endpoint" {
   name                 = "privateEndpointSubnet"
-  resource_group_name  = azurerm_resource_group.example.name
-  virtual_network_name = azurerm_virtual_network.example.name
+  resource_group_name  = resource_group.example.name
+  virtual_network_name = virtual_network.example.name
   address_prefixes     = ["10.0.0.0/24"]
 }
 
-resource "azurerm_storage_account" "example" {
+resource "storage_account" "example" {
   name                     = "storageaccountname"
-  resource_group_name      = azurerm_resource_group.example.name
-  location                 = azurerm_resource_group.example.location
+  resource_group_name      = resource_group.example.name
+  location                 = resource_group.example.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
 }
 
-module "azurerm_private_dns_zones" {
+module "private_dns_zones" {
   source      = "./.."
   region_name = "spaincentral"
 }
 
-resource "azurerm_private_dns_zone" "blob" {
+resource "private_dns_zone" "blob" {
   name                = local.unique_private_dns_zone_names["blob"][0]
   resource_group_name = "example-rg"
 }
 
-resource "azurerm_private_dns_zone_virtual_network_link" "blob" {
-  name                  = "link-to-${azurerm_virtual_network.example.name}"
-  resource_group_name   = azurerm_resource_group.example.name
-  private_dns_zone_name = azurerm_private_dns_zone.blob.name
-  virtual_network_id    = azurerm_virtual_network.example.id
+resource "private_dns_zone_virtual_network_link" "blob" {
+  name                  = "link-to-${virtual_network.example.name}"
+  resource_group_name   = resource_group.example.name
+  private_dns_zone_name = private_dns_zone.blob.name
+  virtual_network_id    = virtual_network.example.id
 }
 
-resource "azurerm_private_endpoint" "blob" {
+resource "private_endpoint" "blob" {
   name                = "private-endpoint-01"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
-  subnet_id           = azurerm_subnet.private_endpoint.id
+  location            = resource_group.example.location
+  resource_group_name = resource_group.example.name
+  subnet_id           = subnet.private_endpoint.id
 
   private_service_connection {
     name                           = "blob-privateserviceconnection"
-    private_connection_resource_id = azurerm_storage_account.example.id
+    private_connection_resource_id = storage_account.example.id
     subresource_names              = ["blob"]
     is_manual_connection           = false
   }
 
   private_dns_zone_group {
     name                 = "blob-dns-zone-group"
-    private_dns_zone_ids = [azurerm_private_dns_zone.blob.id]
+    private_dns_zone_ids = [private_dns_zone.blob.id]
   }
-  depends_on = [azurerm_private_dns_zone_virtual_network_link.blob]
+  depends_on = [private_dns_zone_virtual_network_link.blob]
 }
 
-resource "azurerm_private_endpoint" "blob_secondary" {
+resource "private_endpoint" "blob_secondary" {
   name                = "private-endpoint-02"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
-  subnet_id           = azurerm_subnet.private_endpoint.id
+  location            = resource_group.example.location
+  resource_group_name = resource_group.example.name
+  subnet_id           = subnet.private_endpoint.id
 
   private_service_connection {
     name                           = "blob-secondary-privateserviceconnection"
-    private_connection_resource_id = azurerm_storage_account.example.id
+    private_connection_resource_id = storage_account.example.id
     subresource_names              = ["blob_secondary"]
     is_manual_connection           = false
   }
 
   private_dns_zone_group {
     name                 = "blob-secondary-dns-zone-group"
-    private_dns_zone_ids = [azurerm_private_dns_zone.blob.id]
+    private_dns_zone_ids = [private_dns_zone.blob.id]
   }
-  depends_on = [azurerm_private_dns_zone_virtual_network_link.blob]
+  depends_on = [private_dns_zone_virtual_network_link.blob]
 }
 ```
 

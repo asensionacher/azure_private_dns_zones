@@ -3,9 +3,9 @@ output "machine_learning_workspace" {
   description = "Machine Learning Workspace"
 }
 
-output "azurerm_ai_services" {
-  value       = local.az.azurerm_ai_services
-  description = "Azurerm Ai Services"
+output "ai_services" {
+  value       = local.az.ai_services
+  description = "Ai Services"
 }
 
 output "bot_service_azure_bot" {

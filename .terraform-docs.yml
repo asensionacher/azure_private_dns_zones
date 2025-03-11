@@ -2,8 +2,8 @@ formatter: "" # this is required
 
 version: ""
 
-header-from: .terraform-docs/terraform-docs-header.md
-footer-from: .terraform-docs/terraform-docs-footer.md
+header-from: _header.md
+footer-from: _footer.md
 
 sections:
   hide: [resources, requirements, providers, modules]

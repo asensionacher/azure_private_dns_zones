@@ -1,4 +1,3 @@
-<!-- BEGIN_TF_DOCS -->
 # Azure Private DNS Zones helper
 
 This module helps you to easily deploy Private DNS zones for Azure private endpoints for Terraform without havingsub to remember or going into the documentation to check the zone names. The goal of this module is that for each resource you need to deploy the Private DNS zones you will be easily able to get this name for being used to deploy the resource and be sure you are not having any error on the name or the subresource.
@@ -12,97 +11,97 @@ An example for deploying an storage account with Private DNS Zone for blob, priv
 ```hcl
 locals {
   # Get unique private dns zones
-  unique_private_dns_zone_names = { for zone in module.azurerm_private_dns_zones.storage_account.subresources : zone.name => zone.private_dns_zone_names }
+  unique_private_dns_zone_names = { for zone in module.private_dns_zones.storage_account.subresources : zone.name => zone.private_dns_zone_names }
 }
 output "local" {
   value = local.unique_private_dns_zone_names
 }
 
 # Resource Group
-resource "azurerm_resource_group" "example" {
+resource "resource_group" "example" {
   name     = "example-resources"
   location = "spaincentral"
 }
 
 # Virtual Network
-resource "azurerm_virtual_network" "example" {
+resource "virtual_network" "example" {
   name                = "example-vnet"
   address_space       = ["10.0.0.0/16"]
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
+  location            = resource_group.example.location
+  resource_group_name = resource_group.example.name
 }
 
 # Subnet 1
-resource "azurerm_subnet" "private_endpoint" {
+resource "subnet" "private_endpoint" {
   name                 = "privateEndpointSubnet"
-  resource_group_name  = azurerm_resource_group.example.name
-  virtual_network_name = azurerm_virtual_network.example.name
+  resource_group_name  = resource_group.example.name
+  virtual_network_name = virtual_network.example.name
   address_prefixes     = ["10.0.0.0/24"]
 }
 
-resource "azurerm_storage_account" "example" {
+resource "storage_account" "example" {
   name                     = "storageaccountname"
-  resource_group_name      = azurerm_resource_group.example.name
-  location                 = azurerm_resource_group.example.location
+  resource_group_name      = resource_group.example.name
+  location                 = resource_group.example.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
 }
 
-module "azurerm_private_dns_zones" {
+module "private_dns_zones" {
   source      = "./.."
   region_name = "spaincentral"
 }
 
-resource "azurerm_private_dns_zone" "blob" {
+resource "private_dns_zone" "blob" {
   name                = local.unique_private_dns_zone_names["blob"][0]
   resource_group_name = "example-rg"
 }
 
-resource "azurerm_private_dns_zone_virtual_network_link" "blob" {
-  name                  = "link-to-${azurerm_virtual_network.example.name}"
-  resource_group_name   = azurerm_resource_group.example.name
-  private_dns_zone_name = azurerm_private_dns_zone.blob.name
-  virtual_network_id    = azurerm_virtual_network.example.id
+resource "private_dns_zone_virtual_network_link" "blob" {
+  name                  = "link-to-${virtual_network.example.name}"
+  resource_group_name   = resource_group.example.name
+  private_dns_zone_name = private_dns_zone.blob.name
+  virtual_network_id    = virtual_network.example.id
 }
 
-resource "azurerm_private_endpoint" "blob" {
+resource "private_endpoint" "blob" {
   name                = "private-endpoint-01"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
-  subnet_id           = azurerm_subnet.private_endpoint.id
+  location            = resource_group.example.location
+  resource_group_name = resource_group.example.name
+  subnet_id           = subnet.private_endpoint.id
 
   private_service_connection {
     name                           = "blob-privateserviceconnection"
-    private_connection_resource_id = azurerm_storage_account.example.id
+    private_connection_resource_id = storage_account.example.id
     subresource_names              = ["blob"]
     is_manual_connection           = false
   }
 
   private_dns_zone_group {
     name                 = "blob-dns-zone-group"
-    private_dns_zone_ids = [azurerm_private_dns_zone.blob.id]
+    private_dns_zone_ids = [private_dns_zone.blob.id]
   }
-  depends_on = [azurerm_private_dns_zone_virtual_network_link.blob]
+  depends_on = [private_dns_zone_virtual_network_link.blob]
 }
 
-resource "azurerm_private_endpoint" "blob_secondary" {
+resource "private_endpoint" "blob_secondary" {
   name                = "private-endpoint-02"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
-  subnet_id           = azurerm_subnet.private_endpoint.id
+  location            = resource_group.example.location
+  resource_group_name = resource_group.example.name
+  subnet_id           = subnet.private_endpoint.id
 
   private_service_connection {
     name                           = "blob-secondary-privateserviceconnection"
-    private_connection_resource_id = azurerm_storage_account.example.id
+    private_connection_resource_id = storage_account.example.id
     subresource_names              = ["blob_secondary"]
     is_manual_connection           = false
   }
 
   private_dns_zone_group {
     name                 = "blob-secondary-dns-zone-group"
-    private_dns_zone_ids = [azurerm_private_dns_zone.blob.id]
+    private_dns_zone_ids = [private_dns_zone.blob.id]
   }
-  depends_on = [azurerm_private_dns_zone_virtual_network_link.blob]
+  depends_on = [private_dns_zone_virtual_network_link.blob]
 }
 ```
 
@@ -124,12 +123,12 @@ No resources.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_ai_services"></a> [ai\_services](#output\_ai\_services) | Ai Services |
 | <a name="output_api_management"></a> [api\_management](#output\_api\_management) | Api Management |
 | <a name="output_app_configuration"></a> [app\_configuration](#output\_app\_configuration) | App Configuration |
 | <a name="output_arc_private_link_scope"></a> [arc\_private\_link\_scope](#output\_arc\_private\_link\_scope) | Arc Private Link Scope |
 | <a name="output_attestation_provider"></a> [attestation\_provider](#output\_attestation\_provider) | Attestation Provider |
 | <a name="output_automation_account"></a> [automation\_account](#output\_automation\_account) | Automation Account |
-| <a name="output_azurerm_ai_services"></a> [azurerm\_ai\_services](#output\_azurerm\_ai\_services) | Azurerm Ai Services |
 | <a name="output_batch_account"></a> [batch\_account](#output\_batch\_account) | Batch Account |
 | <a name="output_bot_service_azure_bot"></a> [bot\_service\_azure\_bot](#output\_bot\_service\_azure\_bot) | Bot Service Azure Bot |
 | <a name="output_container_app"></a> [container\_app](#output\_container\_app) | Container App |
@@ -185,4 +184,3 @@ No resources.
 | <a name="output_windows_function_app"></a> [windows\_function\_app](#output\_windows\_function\_app) | Windows Function App |
 
 *Made with ❤️ by Sergi Asensio, part of **Bossard AG Schweiz**, clearly influenced by [terraform-azurerm-naming module](https://github.com/Azure/terraform-azurerm-naming).*
-<!-- END_TF_DOCS -->
