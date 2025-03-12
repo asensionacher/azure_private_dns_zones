@@ -1,0 +1,1158 @@
+[
+  {
+    "Name": "machine_learning_workspace",
+    "Subresources": [
+      {
+        "Name": "amlworkspace",
+        "PrivateDnsZoneNames": [
+          "privatelink.api.azureml.ms",
+          "privatelink.notebooks.azure.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "api.azureml.ms",
+          "notebooks.azure.net",
+          "instances.azureml.ms",
+          "aznbcontent.net",
+          "inference.ml.azure.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "ai_services",
+    "Subresources": [
+      {
+        "Name": "account",
+        "PrivateDnsZoneNames": [
+          "privatelink.cognitiveservices.azure.com",
+          "privatelink.openai.azure.com",
+          "privatelink.services.ai.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "cognitiveservices.azure.com",
+          "openai.azure.com",
+          "services.ai.azure.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "bot_service_azure_bot",
+    "Subresources": [
+      {
+        "Name": "Bot",
+        "PrivateDnsZoneNames": [
+          "privatelink.directline.botframework.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "directline.botframework.com"
+        ]
+      },
+      {
+        "Name": "Token",
+        "PrivateDnsZoneNames": [
+          "privatelink.token.botframework.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "token.botframework.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "synapse_workspace",
+    "Subresources": [
+      {
+        "Name": "Sql",
+        "PrivateDnsZoneNames": [
+          "privatelink.sql.azuresynapse.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "sql.azuresynapse.net"
+        ]
+      },
+      {
+        "Name": "SqlOnDemand",
+        "PrivateDnsZoneNames": [
+          "privatelink.sql.azuresynapse.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "sql.azuresynapse.net"
+        ]
+      },
+      {
+        "Name": "Dev",
+        "PrivateDnsZoneNames": [
+          "privatelink.dev.azuresynapse.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "dev.azuresynapse.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "synapse_private_link_hub",
+    "Subresources": [
+      {
+        "Name": "Web",
+        "PrivateDnsZoneNames": [
+          "privatelink.azuresynapse.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azuresynapse.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "eventhub",
+    "Subresources": [
+      {
+        "Name": "namespace",
+        "PrivateDnsZoneNames": [
+          "privatelink.servicebus.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "servicebus.windows.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "servicebus_namespace",
+    "Subresources": [
+      {
+        "Name": "namespace",
+        "PrivateDnsZoneNames": [
+          "privatelink.servicebus.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "servicebus.windows.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "data_factory",
+    "Subresources": [
+      {
+        "Name": "dataFactory",
+        "PrivateDnsZoneNames": [
+          "privatelink.datafactory.azure.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "datafactory.azure.net"
+        ]
+      },
+      {
+        "Name": "portal",
+        "PrivateDnsZoneNames": [
+          "privatelink.adf.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "adf.azure.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "hdinsight_hadoop_cluster",
+    "Subresources": [
+      {
+        "Name": "gateway",
+        "PrivateDnsZoneNames": [
+          "privatelink.azurehdinsight.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurehdinsight.net"
+        ]
+      },
+      {
+        "Name": "headnode",
+        "PrivateDnsZoneNames": [
+          "privatelink.azurehdinsight.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurehdinsight.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "hdinsight_hbase_cluster",
+    "Subresources": [
+      {
+        "Name": "gateway",
+        "PrivateDnsZoneNames": [
+          "privatelink.azurehdinsight.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurehdinsight.net"
+        ]
+      },
+      {
+        "Name": "headnode",
+        "PrivateDnsZoneNames": [
+          "privatelink.azurehdinsight.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurehdinsight.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "hdinsight_kafka_cluster",
+    "Subresources": [
+      {
+        "Name": "gateway",
+        "PrivateDnsZoneNames": [
+          "privatelink.azurehdinsight.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurehdinsight.net"
+        ]
+      },
+      {
+        "Name": "headnode",
+        "PrivateDnsZoneNames": [
+          "privatelink.azurehdinsight.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurehdinsight.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "hdinsight_spark_cluster",
+    "Subresources": [
+      {
+        "Name": "gateway",
+        "PrivateDnsZoneNames": [
+          "privatelink.azurehdinsight.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurehdinsight.net"
+        ]
+      },
+      {
+        "Name": "headnode",
+        "PrivateDnsZoneNames": [
+          "privatelink.azurehdinsight.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurehdinsight.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "hdinsight_interactive_query_cluster",
+    "Subresources": [
+      {
+        "Name": "gateway",
+        "PrivateDnsZoneNames": [
+          "privatelink.azurehdinsight.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurehdinsight.net"
+        ]
+      },
+      {
+        "Name": "headnode",
+        "PrivateDnsZoneNames": [
+          "privatelink.azurehdinsight.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurehdinsight.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "kusto_cluster",
+    "Subresources": [
+      {
+        "Name": "cluster",
+        "PrivateDnsZoneNames": [
+          "privatelink.{regionName}.kusto.windows.net",
+          "privatelink.blob.core.windows.net",
+          "privatelink.queue.core.windows.net",
+          "privatelink.table.core.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "{regionName}.kusto.windows.net",
+          "blob.core.windows.net",
+          "queue.core.windows.net",
+          "table.core.windows.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "databricks_workspace",
+    "Subresources": [
+      {
+        "Name": "databricks_ui_api",
+        "PrivateDnsZoneNames": [
+          "privatelink.azuredatabricks.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azuredatabricks.net"
+        ]
+      },
+      {
+        "Name": "browser_authentication",
+        "PrivateDnsZoneNames": [
+          "privatelink.azuredatabricks.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azuredatabricks.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "batch_account",
+    "Subresources": [
+      {
+        "Name": "batchAccount",
+        "PrivateDnsZoneNames": [
+          "privatelink.batch.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "{regionName}.batch.azure.com"
+        ]
+      },
+      {
+        "Name": "nodeManagement",
+        "PrivateDnsZoneNames": [
+          "privatelink.batch.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "{regionName}.service.batch.azure.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "virtual_desktop_workspace",
+    "Subresources": [
+      {
+        "Name": "global",
+        "PrivateDnsZoneNames": [
+          "privatelink-global.wvd.microsoft.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "wvd.microsoft.com"
+        ]
+      },
+      {
+        "Name": "feed",
+        "PrivateDnsZoneNames": [
+          "privatelink.wvd.microsoft.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "wvd.microsoft.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "virtual_desktop_host_pool",
+    "Subresources": [
+      {
+        "Name": "connection",
+        "PrivateDnsZoneNames": [
+          "privatelink.wvd.microsoft.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "wvd.microsoft.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "kubernetes_cluster",
+    "Subresources": [
+      {
+        "Name": "management",
+        "PrivateDnsZoneNames": [
+          "privatelink.{regionName}.azmk8s.io",
+          "{subzone}.privatelink.{regionName}.azmk8s.io"
+        ],
+        "PublicDnsZoneForwarders": [
+          "{regionName}.azmk8s.io"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "container_app",
+    "Subresources": [
+      {
+        "Name": "managedEnvironment",
+        "PrivateDnsZoneNames": [
+          "privatelink.{regionName}.azurecontainerapps.io"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurecontainerapps.io"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "container_registry",
+    "Subresources": [
+      {
+        "Name": "privatelink.azurecr.io",
+        "PrivateDnsZoneNames": [
+          "{regionName}.data.privatelink.azurecr.io"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurecr.io",
+          "{regionName}.data.azurecr.io"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "mssql_server",
+    "Subresources": [
+      {
+        "Name": "sqlServer",
+        "PrivateDnsZoneNames": [
+          "privatelink.database.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "database.windows.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "mssql_managed_instance",
+    "Subresources": [
+      {
+        "Name": "privatelink.{dnsPrefix}.database.windows.net",
+        "PrivateDnsZoneNames": [],
+        "PublicDnsZoneForwarders": [
+          "{instanceName}.{dnsPrefix}.database.windows.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "cosmosdb_account",
+    "Subresources": [
+      {
+        "Name": "Sql",
+        "PrivateDnsZoneNames": [
+          "privatelink.documents.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "documents.azure.com"
+        ]
+      },
+      {
+        "Name": "MongoDB",
+        "PrivateDnsZoneNames": [
+          "privatelink.mongo.cosmos.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "mongo.cosmos.azure.com"
+        ]
+      },
+      {
+        "Name": "Cassandra",
+        "PrivateDnsZoneNames": [
+          "privatelink.cassandra.cosmos.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "cassandra.cosmos.azure.com"
+        ]
+      },
+      {
+        "Name": "Gremlin",
+        "PrivateDnsZoneNames": [
+          "privatelink.gremlin.cosmos.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "gremlin.cosmos.azure.com"
+        ]
+      },
+      {
+        "Name": "Table",
+        "PrivateDnsZoneNames": [
+          "privatelink.table.cosmos.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "table.cosmos.azure.com"
+        ]
+      },
+      {
+        "Name": "Analytical",
+        "PrivateDnsZoneNames": [
+          "privatelink.analytics.cosmos.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "analytics.cosmos.azure.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "postgresql_server",
+    "Subresources": [
+      {
+        "Name": "postgresqlServer",
+        "PrivateDnsZoneNames": [
+          "privatelink.postgres.database.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "postgres.database.azure.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "postgresql_flexible_server",
+    "Subresources": [
+      {
+        "Name": "postgresqlServer",
+        "PrivateDnsZoneNames": [
+          "privatelink.postgres.database.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "postgres.database.azure.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "mysql_flexible_server",
+    "Subresources": [
+      {
+        "Name": "mysqlServer",
+        "PrivateDnsZoneNames": [
+          "privatelink.mysql.database.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "mysql.database.azure.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "redis_cache",
+    "Subresources": [
+      {
+        "Name": "redisCache",
+        "PrivateDnsZoneNames": [
+          "privatelink.redis.cache.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "redis.cache.windows.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "redis_enterprise_cluster",
+    "Subresources": [
+      {
+        "Name": "redisEnterprise",
+        "PrivateDnsZoneNames": [
+          "privatelink.redis.azure.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "{instanceName}.{region}.redis.azure.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "arc_private_link_scope",
+    "Subresources": [
+      {
+        "Name": "hybridcompute",
+        "PrivateDnsZoneNames": [
+          "privatelink.his.arc.azure.com",
+          "privatelink.guestconfiguration.azure.com",
+          "privatelink.dp.kubernetesconfiguration.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "his.arc.azure.com",
+          "guestconfiguration.azure.com",
+          "dp.kubernetesconfiguration.azure.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "eventgrid_topic",
+    "Subresources": [
+      {
+        "Name": "topic",
+        "PrivateDnsZoneNames": [
+          "privatelink.eventgrid.azure.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "eventgrid.azure.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "eventgrid_domain",
+    "Subresources": [
+      {
+        "Name": "domain",
+        "PrivateDnsZoneNames": [
+          "privatelink.eventgrid.azure.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "eventgrid.azure.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "eventgrid_namespace",
+    "Subresources": [
+      {
+        "Name": "topic",
+        "PrivateDnsZoneNames": [
+          "privatelink.eventgrid.azure.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "eventgrid.azure.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "api_management",
+    "Subresources": [
+      {
+        "Name": "Gateway",
+        "PrivateDnsZoneNames": [
+          "privatelink.azure-api.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azure-api.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "healthcare_workspace",
+    "Subresources": [
+      {
+        "Name": "healthcareworkspace",
+        "PrivateDnsZoneNames": [
+          "privatelink.workspace.azurehealthcareapis.com",
+          "privatelink.fhir.azurehealthcareapis.com",
+          "privatelink.dicom.azurehealthcareapis.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "workspace.azurehealthcareapis.com",
+          "fhir.azurehealthcareapis.com",
+          "dicom.azurehealthcareapis.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "iothub",
+    "Subresources": [
+      {
+        "Name": "iotHub",
+        "PrivateDnsZoneNames": [
+          "privatelink.azure-devices.net",
+          "privatelink.servicebus.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azure-devices.net",
+          "servicebus.windows.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "iothub_dps",
+    "Subresources": [
+      {
+        "Name": "iotDps",
+        "PrivateDnsZoneNames": [
+          "privatelink.azure-devices-provisioning.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azure-devices-provisioning.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "iothub_device_update_account",
+    "Subresources": [
+      {
+        "Name": "DeviceUpdate",
+        "PrivateDnsZoneNames": [
+          "privatelink.api.adu.microsoft.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "api.adu.microsoft.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "iotcentral_application",
+    "Subresources": [
+      {
+        "Name": "iotApp",
+        "PrivateDnsZoneNames": [
+          "privatelink.azureiotcentral.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azureiotcentral.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "digital_twins_instance",
+    "Subresources": [
+      {
+        "Name": "API",
+        "PrivateDnsZoneNames": [
+          "privatelink.digitaltwins.azure.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "digitaltwins.azure.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "automation_account",
+    "Subresources": [
+      {
+        "Name": "Webhook",
+        "PrivateDnsZoneNames": [
+          "privatelink.azure-automation.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "{regionCode}.azure-automation.net"
+        ]
+      },
+      {
+        "Name": "DSCAndHybridWorker",
+        "PrivateDnsZoneNames": [
+          "privatelink.azure-automation.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "{regionCode}.azure-automation.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "recovery_services_vault",
+    "Subresources": [
+      {
+        "Name": "AzureBackup",
+        "PrivateDnsZoneNames": [
+          "privatelink.{regionCode}.backup.windowsazure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "{regionCode}.backup.windowsazure.com"
+        ]
+      },
+      {
+        "Name": "AzureSiteRecovery",
+        "PrivateDnsZoneNames": [
+          "privatelink.siterecovery.windowsazure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "{regionCode}.siterecovery.windowsazure.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "monitor_private_link_scope",
+    "Subresources": [
+      {
+        "Name": "azuremonitor",
+        "PrivateDnsZoneNames": [
+          "privatelink.monitor.azure.com",
+          "privatelink.oms.opinsights.azure.com",
+          "privatelink.ods.opinsights.azure.com",
+          "privatelink.agentsvc.azure-automation.net",
+          "privatelink.blob.core.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "monitor.azure.com",
+          "oms.opinsights.azure.com",
+          "ods.opinsights.azure.com",
+          "agentsvc.azure-automation.net",
+          "blob.core.windows.net",
+          "services.visualstudio.com",
+          "applicationinsights.azure.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "purview_account",
+    "Subresources": [
+      {
+        "Name": "account",
+        "PrivateDnsZoneNames": [
+          "privatelink.purview.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "purview.azure.com"
+        ]
+      },
+      {
+        "Name": "portal",
+        "PrivateDnsZoneNames": [
+          "privatelink.purviewstudio.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "purviewstudio.azure.com"
+        ]
+      },
+      {
+        "Name": "platform",
+        "PrivateDnsZoneNames": [
+          "privatelink.purview-service.microsoft.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "purview-service.microsoft.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "resource_management_private_link",
+    "Subresources": [
+      {
+        "Name": "ResourceManagement",
+        "PrivateDnsZoneNames": [
+          "privatelink.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azure.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "dashboard_grafana",
+    "Subresources": [
+      {
+        "Name": "grafana",
+        "PrivateDnsZoneNames": [
+          "privatelink.grafana.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "grafana.azure.com"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "key_vault",
+    "Subresources": [
+      {
+        "Name": "vault",
+        "PrivateDnsZoneNames": [
+          "privatelink.vaultcore.azure.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "vault.azure.net",
+          "vaultcore.azure.net"
+        ]
+      },
+      {
+        "Name": "managedhsm",
+        "PrivateDnsZoneNames": [
+          "privatelink.managedhsm.azure.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "managedhsm.azure.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "app_configuration",
+    "Subresources": [
+      {
+        "Name": "configurationStores",
+        "PrivateDnsZoneNames": [
+          "privatelink.azconfig.io"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azconfig.io"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "attestation_provider",
+    "Subresources": [
+      {
+        "Name": "standard",
+        "PrivateDnsZoneNames": [
+          "privatelink.attest.azure.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "attest.azure.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "storage_account",
+    "Subresources": [
+      {
+        "Name": "blob",
+        "PrivateDnsZoneNames": [
+          "privatelink.blob.core.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "blob.core.windows.net"
+        ]
+      },
+      {
+        "Name": "blob_secondary",
+        "PrivateDnsZoneNames": [
+          "privatelink.blob.core.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "blob.core.windows.net"
+        ]
+      },
+      {
+        "Name": "table",
+        "PrivateDnsZoneNames": [
+          "privatelink.table.core.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "table.core.windows.net"
+        ]
+      },
+      {
+        "Name": "table_secondary",
+        "PrivateDnsZoneNames": [
+          "privatelink.table.core.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "table.core.windows.net"
+        ]
+      },
+      {
+        "Name": "queue",
+        "PrivateDnsZoneNames": [
+          "privatelink.queue.core.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "queue.core.windows.net"
+        ]
+      },
+      {
+        "Name": "queue_secondary",
+        "PrivateDnsZoneNames": [
+          "privatelink.queue.core.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "queue.core.windows.net"
+        ]
+      },
+      {
+        "Name": "file",
+        "PrivateDnsZoneNames": [
+          "privatelink.file.core.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "file.core.windows.net"
+        ]
+      },
+      {
+        "Name": "web",
+        "PrivateDnsZoneNames": [
+          "privatelink.web.core.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "web.core.windows.net"
+        ]
+      },
+      {
+        "Name": "web_secondary",
+        "PrivateDnsZoneNames": [
+          "privatelink.web.core.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "web.core.windows.net"
+        ]
+      },
+      {
+        "Name": "dfs",
+        "PrivateDnsZoneNames": [
+          "privatelink.dfs.core.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "dfs.core.windows.net"
+        ]
+      },
+      {
+        "Name": "dfs_secondary",
+        "PrivateDnsZoneNames": [
+          "privatelink.dfs.core.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "dfs.core.windows.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "storage_sync",
+    "Subresources": [
+      {
+        "Name": "afs",
+        "PrivateDnsZoneNames": [
+          "privatelink.afs.azure.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "afs.azure.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "managed_disk",
+    "Subresources": [
+      {
+        "Name": "disks",
+        "PrivateDnsZoneNames": [
+          "privatelink.blob.core.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "blob.core.windows.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "search_service",
+    "Subresources": [
+      {
+        "Name": "searchService",
+        "PrivateDnsZoneNames": [
+          "privatelink.search.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "search.windows.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "relay_namespace",
+    "Subresources": [
+      {
+        "Name": "namespace",
+        "PrivateDnsZoneNames": [
+          "privatelink.servicebus.windows.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "servicebus.windows.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "linux_function_app",
+    "Subresources": [
+      {
+        "Name": "sites",
+        "PrivateDnsZoneNames": [
+          "privatelink.azurewebsites.net",
+          "scm.privatelink.azurewebsites.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurewebsites.net",
+          "scm.azurewebsites.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "windows_function_app",
+    "Subresources": [
+      {
+        "Name": "sites",
+        "PrivateDnsZoneNames": [
+          "privatelink.azurewebsites.net",
+          "scm.privatelink.azurewebsites.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurewebsites.net",
+          "scm.azurewebsites.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "signalr_service",
+    "Subresources": [
+      {
+        "Name": "signalr",
+        "PrivateDnsZoneNames": [
+          "privatelink.service.signalr.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "service.signalr.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "static_web_app",
+    "Subresources": [
+      {
+        "Name": "staticSites",
+        "PrivateDnsZoneNames": [
+          "privatelink.azurestaticapps.net",
+          "privatelink.{partitionId}.azurestaticapps.net"
+        ],
+        "PublicDnsZoneForwarders": [
+          "azurestaticapps.net",
+          "{partitionId}.azurestaticapps.net"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "web_pubsub",
+    "Subresources": [
+      {
+        "Name": "webpubsub",
+        "PrivateDnsZoneNames": [
+          "privatelink.webpubsub.azure.com"
+        ],
+        "PublicDnsZoneForwarders": [
+          "webpubsub.azure.com"
+        ]
+      }
+    ]
+  }
+]

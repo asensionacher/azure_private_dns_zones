@@ -1,0 +1,590 @@
+{
+    "GeoCodeList": {
+        "GeoCodeRegionNameMap": [
+            {
+                "_GeoCode": "EA",
+                "_RegionName": "East Asia"
+            },
+            {
+                "_GeoCode": "WUS",
+                "_RegionName": "West US"
+            },
+            {
+                "_GeoCode": "EUS",
+                "_RegionName": "East US"
+            },
+            {
+                "_GeoCode": "CUS",
+                "_RegionName": "Central US"
+            },
+            {
+                "_GeoCode": "EUS2",
+                "_RegionName": "East US 2"
+            },
+            {
+                "_GeoCode": "NCUS",
+                "_RegionName": "North Central US"
+            },
+            {
+                "_GeoCode": "SCUS",
+                "_RegionName": "South Central US"
+            },
+            {
+                "_GeoCode": "NE",
+                "_RegionName": "North Europe"
+            },
+            {
+                "_GeoCode": "WE",
+                "_RegionName": "West Europe"
+            },
+            {
+                "_GeoCode": "SEA",
+                "_RegionName": "Southeast Asia"
+            },
+            {
+                "_GeoCode": "JPE",
+                "_RegionName": "Japan East"
+            },
+            {
+                "_GeoCode": "JPW",
+                "_RegionName": "Japan West"
+            },
+            {
+                "_GeoCode": "BRS",
+                "_RegionName": "Brazil South"
+            },
+            {
+                "_GeoCode": "AE",
+                "_RegionName": "Australia East"
+            },
+            {
+                "_GeoCode": "ASE",
+                "_RegionName": "Australia Southeast"
+            },
+            {
+                "_GeoCode": "INC",
+                "_RegionName": "Central India"
+            },
+            {
+                "_GeoCode": "INS",
+                "_RegionName": "South India"
+            },
+            {
+                "_GeoCode": "CNC",
+                "_RegionName": "Canada Central"
+            },
+            {
+                "_GeoCode": "CNE",
+                "_RegionName": "Canada East"
+            },
+            {
+                "_GeoCode": "WCUS",
+                "_RegionName": "West Central US"
+            },
+            {
+                "_GeoCode": "WUS2",
+                "_RegionName": "West US 2"
+            },
+            {
+                "_GeoCode": "UKW",
+                "_RegionName": "UK West"
+            },
+            {
+                "_GeoCode": "UKS",
+                "_RegionName": "UK South"
+            },
+            {
+                "_GeoCode": "CCY",
+                "_RegionName": "Central US EUAP"
+            },
+            {
+                "_GeoCode": "ECY",
+                "_RegionName": "East US 2 EUAP"
+            },
+            {
+                "_GeoCode": "KRS",
+                "_RegionName": "Korea South"
+            },
+            {
+                "_GeoCode": "KRC",
+                "_RegionName": "Korea Central"
+            },
+            {
+                "_GeoCode": "FRC",
+                "_RegionName": "France Central"
+            },
+            {
+                "_GeoCode": "FRS",
+                "_RegionName": "France South"
+            },
+            {
+                "_GeoCode": "ACL",
+                "_RegionName": "Australia Central"
+            },
+            {
+                "_GeoCode": "ACL2",
+                "_RegionName": "Australia Central 2"
+            },
+            {
+                "_GeoCode": "UAC",
+                "_RegionName": "UAE Central"
+            },
+            {
+                "_GeoCode": "UAN",
+                "_RegionName": "UAE North"
+            },
+            {
+                "_GeoCode": "SAN",
+                "_RegionName": "South Africa North"
+            },
+            {
+                "_GeoCode": "SAW",
+                "_RegionName": "South Africa West"
+            },
+            {
+                "_GeoCode": "INW",
+                "_RegionName": "West India"
+            },
+            {
+                "_GeoCode": "NWE",
+                "_RegionName": "Norway East"
+            },
+            {
+                "_GeoCode": "NWW",
+                "_RegionName": "Norway West"
+            },
+            {
+                "_GeoCode": "SZN",
+                "_RegionName": "Switzerland North"
+            },
+            {
+                "_GeoCode": "SZW",
+                "_RegionName": "Switzerland West"
+            },
+            {
+                "_GeoCode": "GN",
+                "_RegionName": "Germany North"
+            },
+            {
+                "_GeoCode": "GWC",
+                "_RegionName": "Germany West Central"
+            },
+            {
+                "_GeoCode": "SDC",
+                "_RegionName": "Sweden Central"
+            },
+            {
+                "_GeoCode": "SDS",
+                "_RegionName": "Sweden South"
+            },
+            {
+                "_GeoCode": "BSE",
+                "_RegionName": "Brazil Southeast"
+            },
+            {
+                "_GeoCode": "WUS3",
+                "_RegionName": "West US 3"
+            },
+            {
+                "_GeoCode": "JIC",
+                "_RegionName": "Jio India Central"
+            },
+            {
+                "_GeoCode": "JIW",
+                "_RegionName": "Jio India West"
+            },
+            {
+                "_GeoCode": "QAC",
+                "_RegionName": "Qatar Central"
+            },
+            {
+                "_GeoCode": "WUSR",
+                "_RegionName": "East US"
+            },
+            {
+                "_GeoCode": "EUSR",
+                "_RegionName": "West US"
+            },
+            {
+                "_GeoCode": "CUSR",
+                "_RegionName": "East US 2"
+            },
+            {
+                "_GeoCode": "EU2R",
+                "_RegionName": "Central US"
+            },
+            {
+                "_GeoCode": "NCUR",
+                "_RegionName": "South Central US"
+            },
+            {
+                "_GeoCode": "SCUR",
+                "_RegionName": "North Central US"
+            },
+            {
+                "_GeoCode": "NER",
+                "_RegionName": "West Europe"
+            },
+            {
+                "_GeoCode": "WER",
+                "_RegionName": "North Europe"
+            },
+            {
+                "_GeoCode": "EAR",
+                "_RegionName": "Southeast Asia"
+            },
+            {
+                "_GeoCode": "SEAR",
+                "_RegionName": "East Asia"
+            },
+            {
+                "_GeoCode": "JPER",
+                "_RegionName": "Japan West"
+            },
+            {
+                "_GeoCode": "JPWR",
+                "_RegionName": "Japan East"
+            },
+            {
+                "_GeoCode": "BRSR",
+                "_RegionName": "South Central US"
+            },
+            {
+                "_GeoCode": "AER",
+                "_RegionName": "Australia Southeast"
+            },
+            {
+                "_GeoCode": "ASER",
+                "_RegionName": "Australia East"
+            },
+            {
+                "_GeoCode": "INCR",
+                "_RegionName": "South India"
+            },
+            {
+                "_GeoCode": "INSR",
+                "_RegionName": "Central India"
+            },
+            {
+                "_GeoCode": "CNCR",
+                "_RegionName": "Canada East"
+            },
+            {
+                "_GeoCode": "CNER",
+                "_RegionName": "Canada Central"
+            },
+            {
+                "_GeoCode": "WCUR",
+                "_RegionName": "West US 2"
+            },
+            {
+                "_GeoCode": "WU2R",
+                "_RegionName": "West Central US"
+            },
+            {
+                "_GeoCode": "UKWR",
+                "_RegionName": "UK South"
+            },
+            {
+                "_GeoCode": "UKSR",
+                "_RegionName": "UK West"
+            },
+            {
+                "_GeoCode": "CCYR",
+                "_RegionName": "East US 2 EUAP"
+            },
+            {
+                "_GeoCode": "ECYR",
+                "_RegionName": "Central US EUAP"
+            },
+            {
+                "_GeoCode": "KRSR",
+                "_RegionName": "Korea Central"
+            },
+            {
+                "_GeoCode": "KRCR",
+                "_RegionName": "Korea South"
+            },
+            {
+                "_GeoCode": "FRCR",
+                "_RegionName": "France South"
+            },
+            {
+                "_GeoCode": "FRSR",
+                "_RegionName": "France Central"
+            },
+            {
+                "_GeoCode": "ACLR",
+                "_RegionName": "Australia Central 2"
+            },
+            {
+                "_GeoCode": "AC2R",
+                "_RegionName": "Australia Central"
+            },
+            {
+                "_GeoCode": "UACR",
+                "_RegionName": "UAE North"
+            },
+            {
+                "_GeoCode": "UANR",
+                "_RegionName": "UAE Central"
+            },
+            {
+                "_GeoCode": "SANR",
+                "_RegionName": "South Africa West"
+            },
+            {
+                "_GeoCode": "SAWR",
+                "_RegionName": "South Africa North"
+            },
+            {
+                "_GeoCode": "INWR",
+                "_RegionName": "South India"
+            },
+            {
+                "_GeoCode": "NWER",
+                "_RegionName": "Norway West"
+            },
+            {
+                "_GeoCode": "NWWR",
+                "_RegionName": "Norway East"
+            },
+            {
+                "_GeoCode": "SZNR",
+                "_RegionName": "Switzerland West"
+            },
+            {
+                "_GeoCode": "SZWR",
+                "_RegionName": "Switzerland North"
+            },
+            {
+                "_GeoCode": "GNR",
+                "_RegionName": "Germany West Central"
+            },
+            {
+                "_GeoCode": "GWCR",
+                "_RegionName": "Germany North"
+            },
+            {
+                "_GeoCode": "SDCR",
+                "_RegionName": "Sweden South"
+            },
+            {
+                "_GeoCode": "SDSR",
+                "_RegionName": "Sweden Central"
+            },
+            {
+                "_GeoCode": "BSER",
+                "_RegionName": "Brazil South"
+            },
+            {
+                "_GeoCode": "WU3R",
+                "_RegionName": "East US"
+            },
+            {
+                "_GeoCode": "JICR",
+                "_RegionName": "Jio India West"
+            },
+            {
+                "_GeoCode": "JIWR",
+                "_RegionName": "Jio India Central"
+            },
+            {
+                "_GeoCode": "PLC",
+                "_RegionName": "Poland Central"
+            },
+            {
+                "_GeoCode": "MYS",
+                "_RegionName": "Malaysia South"
+            },
+            {
+                "_GeoCode": "MYSR",
+                "_RegionName": "Japan West"
+            },
+            {
+                "_GeoCode": "TWN",
+                "_RegionName": "Taiwan North"
+            },
+            {
+                "_GeoCode": "TWNR",
+                "_RegionName": "Taiwan Northwest"
+            },
+            {
+                "_GeoCode": "TNW",
+                "_RegionName": "Taiwan Northwest"
+            },
+            {
+                "_GeoCode": "TNWR",
+                "_RegionName": "Taiwan North"
+            },
+            {
+                "_GeoCode": "ILC",
+                "_RegionName": "Israel Central"
+            },
+            {
+                "_GeoCode": "ITN",
+                "_RegionName": "Italy North"
+            },
+            {
+                "_GeoCode": "MXC",
+                "_RegionName": "Mexico Central"
+            },
+            {
+                "_GeoCode": "SPC",
+                "_RegionName": "Spain Central"
+            },
+            {
+                "_GeoCode": "CLC",
+                "_RegionName": "Chile Central"
+            },
+            {
+                "_GeoCode": "NZN",
+                "_RegionName": "New Zealand North"
+            },
+            {
+                "_GeoCode": "MYW",
+                "_RegionName": "Malaysia West"
+            },
+            {
+                "_GeoCode": "IDC",
+                "_RegionName": "Indonesia Central"
+            },
+            {
+                "_GeoCode": "USE",
+                "_RegionName": "Southeast US"
+            },
+            {
+                "_GeoCode": "USER",
+                "_RegionName": "West US 3"
+            },
+            {
+                "_GeoCode": "TST",
+                "_RegionName": "UK South"
+            },
+            {
+                "_GeoCode": "UGV",
+                "_RegionName": "USGov Virginia"
+            },
+            {
+                "_GeoCode": "UGA",
+                "_RegionName": "USGov Arizona"
+            },
+            {
+                "_GeoCode": "UGT",
+                "_RegionName": "USGov Texas"
+            },
+            {
+                "_GeoCode": "UDC",
+                "_RegionName": "USDoD Central"
+            },
+            {
+                "_GeoCode": "UDE",
+                "_RegionName": "USDoD East"
+            },
+            {
+                "_GeoCode": "UGVR",
+                "_RegionName": "USGov Texas"
+            },
+            {
+                "_GeoCode": "UGIR",
+                "_RegionName": "USGov Virginia"
+            },
+            {
+                "_GeoCode": "UGAR",
+                "_RegionName": "USGov Texas"
+            },
+            {
+                "_GeoCode": "UGTR",
+                "_RegionName": "USGov Arizona"
+            },
+            {
+                "_GeoCode": "UDCR",
+                "_RegionName": "USDoD East"
+            },
+            {
+                "_GeoCode": "UDER",
+                "_RegionName": "USDoD Central"
+            },
+            {
+                "_GeoCode": "RXE",
+                "_RegionName": "USSec East"
+            },
+            {
+                "_GeoCode": "RXW",
+                "_RegionName": "USSec West"
+            },
+            {
+                "_GeoCode": "RXER",
+                "_RegionName": "USSec West"
+            },
+            {
+                "_GeoCode": "RXWR",
+                "_RegionName": "USSec East"
+            },
+            {
+                "_GeoCode": "EXE",
+                "_RegionName": "USNat East"
+            },
+            {
+                "_GeoCode": "EXW",
+                "_RegionName": "USNat West"
+            },
+            {
+                "_GeoCode": "EXER",
+                "_RegionName": "USNat West"
+            },
+            {
+                "_GeoCode": "EXWR",
+                "_RegionName": "USNat East"
+            },
+            {
+                "_GeoCode": "BJB",
+                "_RegionName": "China North"
+            },
+            {
+                "_GeoCode": "SHA",
+                "_RegionName": "China East"
+            },
+            {
+                "_GeoCode": "BJB2",
+                "_RegionName": "China North 2"
+            },
+            {
+                "_GeoCode": "SHA2",
+                "_RegionName": "China East 2"
+            },
+            {
+                "_GeoCode": "BJB3",
+                "_RegionName": "China North 3"
+            },
+            {
+                "_GeoCode": "SHA3",
+                "_RegionName": "China East 3"
+            },
+            {
+                "_GeoCode": "BJBR",
+                "_RegionName": "China East"
+            },
+            {
+                "_GeoCode": "SHAR",
+                "_RegionName": "China North"
+            },
+            {
+                "_GeoCode": "BJ2R",
+                "_RegionName": "China East 2"
+            },
+            {
+                "_GeoCode": "SH2R",
+                "_RegionName": "China North 2"
+            },
+            {
+                "_GeoCode": "BJ3R",
+                "_RegionName": "China East 3"
+            },
+            {
+                "_GeoCode": "SH3R",
+                "_RegionName": "China North 3"
+            }
+        ]
+    }
+}
