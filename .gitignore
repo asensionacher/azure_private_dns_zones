@@ -36,6 +36,4 @@ override.tf.json
 .terraformrc
 terraform.rc
 *.tfplan
-
-# Utils for internal
-**/utils/*
+**/.terraform.lock.hcl
